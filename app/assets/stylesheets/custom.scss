@@ -68,8 +68,17 @@ p {
 /* header */
 .topnav {
     background-color: $cream;
-    border-bottom: 1px black;
+    border-bottom: 1px black !important;
 }
+
+.icon-bar {
+    background-color: $matte-red !important;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: $cream !important;
+}
+
 #logo {
     float: left;
     margin-right: 10px;

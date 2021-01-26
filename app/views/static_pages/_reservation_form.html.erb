@@ -1,0 +1,21 @@
+<div class="col-sm-3 reservation-box">
+    <h2>Find your stay</h2>
+    <form>  
+        <%# location %>
+        <label>Where</label>
+        <input placeholder="Your favorite city"></input>
+        
+        <%# start_date %>
+        <label>When</label>
+        <input placeholder="Start Date...mm/dd/yyyy"></input>
+        
+        <%# end_date %>
+        <label></label>
+        <input placeholder="End Date...mm/dd/yyyy"></input>
+        
+        <%# guests %>
+        <label># of Guests</label>
+        <input placeholder="3"></input>
+    </form>
+    <%= link_to "Make a reservation!", '#', class: "btn btn-primary" %>
+</div>

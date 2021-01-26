@@ -1,9 +1,24 @@
-<div class="center jumbotron">
+<div class="center home">
+  <div class="row">
   <h1>Rosebud Motels</h1>
-
-  <h2>
-    This is the home page for the rosebud motel chain
-  </h2>
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  </div>
+  <div class="row first-panel">
+    <%= render 'static_pages/reservation_form' %>
+    <%= image_tag("rails.svg", alt: "Rails logo", width: "600") %>
+  </div>
+  <div class="row second-panel">
+    <h2>Location Search</h2>
+    <p>
+      Rosebud Motels has over 36 locations! Search them to find your new favorite city!
+    </p>
+    <button class="btn btn-primary">Search our locations</button>
+  </div>
+  <div class="row third-panel">
+      <h2>Locations 3 pack</h2>
+      <div class="row three-pack-header">
+        <h3>Explore these 3</h3>
+        <p class="three-pack-description">
+          Hodor. Hodor hodor, hodor. Hodor hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor; hodor hodor hodor. Hodor. 
+        </p>
+  </div>
 </div>

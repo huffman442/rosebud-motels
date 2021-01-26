@@ -3,9 +3,10 @@
 
 /* mixins, variables, etc. */
 
-$gray-medium-light: #eaeaea;
-$cream:  #fffef7;
-$matte-red: #C40233;
+$background-primary     : #fffef7;
+$heading-color          : #C40233;
+$primary-button         : #2c2c36;
+$gray-medium-light      : #fffef7;
 
 @mixin box_sizing {
     -moz-box-sizing: border-box;
@@ -38,11 +39,18 @@ textarea {
     }
 }
 
+main {
+    background-color: $background-primary;
+    margin-left: 30px;
+    padding: 90px;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1;
     font-weight: bold;
+    color: $primary-button;
 }
 
 h1 {
@@ -53,11 +61,15 @@ h1 {
 }
 
 h2 {
-    font-size: 1.2em;
+    font-size: 1.5em;
     letter-spacing: -1px;
     margin-bottom: 30px;
     text-align: center;
-    color: $gray-light;
+    color: $primary-button;
+}
+
+h4 {
+    font-size: 1em;
 }
 
 p {
@@ -65,25 +77,42 @@ p {
     line-height: 1.7em;
 }
 
+a {
+    color: $gray;
+    &:hover {
+        color: $primary-button;
+    }
+}
+
 /* header */
 .topnav {
-    background-color: $cream;
+    background-color: $background-primary;
     border-bottom: 1px black !important;
 }
 
 .icon-bar {
-    background-color: $matte-red !important;
+    background-color: $heading-color !important;
 }
+.navbar-inverse .navbar-nav { 
+    li { 
+        a {
+            color: $gray;
+            &:hover {
+                color: $primary-button
+            }
+        }
 
+    }
+}
 .navbar-inverse .navbar-toggle {
-    border-color: $cream !important;
+    border-color: $background-primary !important;
 }
 
 #logo {
     float: left;
     margin-right: 10px;
     font-size: 1.7em;
-    color: $matte-red;
+    color: $heading-color;
     text-transform: uppercase;
     letter-spacing: -1px;
     padding-top: 9px;
@@ -103,14 +132,10 @@ footer {
     a {
         color: $gray;
         &:hover {
-            color:$gray-darker;
+            color:$primary-button;
         }
     }
-    small {
-        float: left;
-    }
     ul {
-        float: right;
         list-style: none;
         li {
             float: left;
@@ -130,12 +155,10 @@ footer {
 }
 
 /* sidebar */
-main {
-    background-color: $cream;
-    margin-left: 30px;
-}
+
+
 aside {
-    background-color: $cream;
+    background-color: $background-primary;
 
     section.user-info {
         margin-top: 20px;
@@ -163,12 +186,12 @@ aside {
 
     a {
         font-weight: normal;
-        color: #C40233;
+        color:$heading-color;
     }
 
     a:hover {
         font-weight: bold;
-        color: #C40233;
+        color: $heading-color;
         text-decoration: none;
     }
     .options {
@@ -194,11 +217,17 @@ input, textarea, select, .uneditable-input {
     border: 1px solid #bbb;
     width: 100%;
     margin-bottom: 15px;
+    
     @include box_sizing;
 }
 
-input {
-    height: auto !important;
+.form-control {
+    background-color: $background-primary; 
+    &:focus {
+        border-color: $primary-button;
+        box-shadow: none;
+        border-width: .35rem;
+    }
 }
 
 #error_explanation {
@@ -213,5 +242,63 @@ input {
     @extend .has-error;
     .form-control {
         color: $state-danger-text;
+    }
+}
+
+/* button options */
+.btn-primary {
+    background-color: $background-primary;
+    color: $primary-button;
+    border-color: $primary-button;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.btn-primary:hover {
+    color: $background-primary;
+    background-color: $primary-button;
+    border-color: $primary-button;
+}
+
+
+/* Home Page */
+.home {
+    .first-panel {
+        padding: 6rem 0;
+        
+    }
+    .second-panel {
+        background-color: $primary-button;
+        padding: 3rem;
+        color: $background-primary;
+        h2 {
+            color: $background-primary;
+        }
+    }
+}
+
+.three-pack-description {
+    width: 70rem;
+    margin: auto;
+}
+
+/* reservation-box */
+.reservation-box {
+    box-shadow:0px 1px 15px 0px $primary-button;
+
+    input {
+        background-color: $background-primary;
+        height: 4rem;
+        margin: 0;
+        border-radius: .25rem;
+    }
+
+    label {
+        float: left;
+        font-size:1.2rem;
+    }
+
+    form { 
+       margin-bottom: 3rem;
     }
 }

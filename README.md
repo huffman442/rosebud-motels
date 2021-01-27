@@ -1,10 +1,7 @@
 # Ruby on Rails Tutorial Rosebud Motels/AirBnb Clone
 
-This is the sample application for
-[*Ruby on Rails Tutorial:
-Learn Web Development with Rails*](https://www.railstutorial.org/)
-(6th Edition)
-
+Using rails 6.1.0
+Ruby version 2.5.3
 
 ## Getting started
 

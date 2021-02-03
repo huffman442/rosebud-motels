@@ -1,11 +1,11 @@
 # Ruby on Rails Tutorial Rosebud Motels/AirBnb Clone
 
-### Using rails 6.1.0
+#### Using rails 6.1.0
 ```
 gem install rails -v 6.1.0
 ```
 
-### Ruby version 2.5.3
+#### Ruby version 2.5.3
 
 ## Getting started
 
@@ -26,7 +26,10 @@ Finally, run the test suite to verify that everything is working correctly:
 ```
 $ rails test
 ```
-
+You may need to run a db:migrate for this on windows use the following:
+```
+ruby bin/rails db:migrate RAILS_ENV=test
+```
 If the test suite passes, you'll be ready to run the app in a local server:
 
 ```

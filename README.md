@@ -36,6 +36,9 @@ If the test suite passes, you'll be ready to run the app in a local server:
 $ rails server
 ```
 
+## Contribution Guidelines
+```rails test``` should pass before code push.
+
 
 ## License
 

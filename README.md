@@ -1,7 +1,11 @@
 # Ruby on Rails Tutorial Rosebud Motels/AirBnb Clone
 
-Using rails 6.1.0
-Ruby version 2.5.3
+### Using rails 6.1.0
+```
+gem install rails -v 6.1.0
+```
+
+### Ruby version 2.5.3
 
 ## Getting started
 
